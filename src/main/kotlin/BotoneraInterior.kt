@@ -2,11 +2,11 @@ package org.example
 
 
 enum class BotoneraInterior(
-    val id: Int,
+    val piso: Int,
 
     val calle: String,
 
-) {
+    ) {
     Piso0(0,"Avenida G. Barbón"),
 
 

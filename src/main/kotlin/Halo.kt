@@ -1,12 +1,12 @@
 package org.example
-import org.example.Estado.Idle
-import org.example.Estado.MovingUp
-import org.example.Estado.MovingDOWN
-import org.example.Estado.Error
+
+import org.example.Estado.*
 import kotlin.toString
 
-class Halo {
+object Halo {
+    var boton: BotoneraInterior? = null
     var currentState: Estado = Idle
+    var tocar: Boolean = true
     fun gestorEstados(): Estado{
         println("-------------------------------")
         println("Estado actual: ${currentState.toString()}")
