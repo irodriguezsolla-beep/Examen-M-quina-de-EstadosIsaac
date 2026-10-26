@@ -3,12 +3,13 @@ package org.example
 
 enum class BotoneraInterior(
     val id: Int,
-    val nombre: String,
+
+    val calle: String,
 
 ) {
-    Piso0(0, "Piso 0"),
+    Piso0(0,"Avenida G. Barbón"),
 
 
-    Piso1(1, "Piso 1"),
+    Piso1(1,"Plaza de Compostela"),
 
 }
