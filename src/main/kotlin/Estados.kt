@@ -1,13 +1,13 @@
 package org.example
 
-import  org.example.Halo.tocar
-import  org.example.Halo.boton
-import  org.example.Halo.currentState
+import  org.example.Gestor.tocar
+import  org.example.Gestor.boton
+import  org.example.Gestor.currentState
 
-sealed class Estado {
+sealed class Estados {
 
 
-    object Idle : Estado() {
+    object Idle : Estados() {
         fun onEnter() {
             println("Entrando al estado E1_Idle")
 
@@ -36,7 +36,7 @@ sealed class Estado {
             return "E1_Idle"
         }
     }
-    object MovingUp : Estado() {
+    object MovingUp : Estados() {
         fun onEnter() {
             val b = boton
             if(b != null && b.piso == 1) {
@@ -53,7 +53,7 @@ sealed class Estado {
             return "MovingUp"
         }
     }
-    object MovingDOWN : Estado() {
+    object MovingDOWN : Estados() {
         fun onEnter() {
             val b = boton
             if(b != null && b.piso == 0) {
@@ -63,7 +63,6 @@ sealed class Estado {
                 currentState = Idle
             }else{
                 currentState = Error
-
             }
         }
 
@@ -71,7 +70,7 @@ sealed class Estado {
             return "MovingUp"
         }
     }
-    object Error : Estado() {
+    object Error : Estados() {
         fun onEnter() {
             println("Error")
 
@@ -81,5 +80,6 @@ sealed class Estado {
             return "Error"
         }
     }
+
 
 }
