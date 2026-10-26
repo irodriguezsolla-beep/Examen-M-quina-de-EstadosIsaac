@@ -134,4 +134,4 @@ class MainTest {
 }
 ```
 test global pasado:
-![Captura desde 2026-10-26 10-46-11.png](../Fotos/Captura%20desde%202026-10-26%2010-46-11.png)
+![Captura desde 2026-10-26 10-46-11.png](Fotos/Captura%20desde%202026-10-26%2010-46-11.png)
